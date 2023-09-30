@@ -9,7 +9,7 @@ void main(List<String> arguments) async { // программа начинает
   );
   final response = await http.get(url); // отправляем запрос
   
-  Map<String, dynamic> jsonData = convert.jsonDecode(response.body);
+  Map<String, dynamic> jsonData = convert.jsonDecode(response.body); // преобразовываем JSON в массив 
  //map(ключ, значение) функция которая не мутирует массив а возвращает итератор(новый массив)
 
   List<dynamic> products = jsonData["products"]; // массив продуктов
